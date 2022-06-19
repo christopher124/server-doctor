@@ -559,11 +559,8 @@
               "role": {
                 "type": "string"
               },
-              "avatar": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "photo": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"

@@ -59,8 +59,8 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "avatar": {
-      "collection": "file",
+    "photo": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"

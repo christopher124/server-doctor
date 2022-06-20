@@ -587,6 +587,9 @@
           },
           "phone": {
             "type": "string"
+          },
+          "state": {
+            "type": "string"
           }
         }
       },
@@ -611,6 +614,9 @@
             "type": "string"
           },
           "phone": {
+            "type": "string"
+          },
+          "state": {
             "type": "string"
           },
           "created_by": {

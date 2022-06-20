@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conditions",
+  "info": {
+    "name": "condition"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

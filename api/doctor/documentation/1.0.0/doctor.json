@@ -516,7 +516,8 @@
     "schemas": {
       "Doctor": {
         "required": [
-          "id"
+          "id",
+          "star"
         ],
         "properties": {
           "id": {
@@ -528,16 +529,10 @@
           "last": {
             "type": "string"
           },
-          "adress": {
-            "type": "string"
-          },
-          "age": {
+          "address": {
             "type": "string"
           },
           "gender": {
-            "type": "string"
-          },
-          "state": {
             "type": "string"
           },
           "phone": {
@@ -609,10 +604,49 @@
                 "type": "string"
               }
             }
+          },
+          "specialtie": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "star": {
+            "type": "number",
+            "default": 0
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
+          },
+          "state": {
+            "type": "string"
+          },
+          "number_int_address": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
           }
         }
       },
       "NewDoctor": {
+        "required": [
+          "star"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -620,16 +654,10 @@
           "last": {
             "type": "string"
           },
-          "adress": {
-            "type": "string"
-          },
-          "age": {
+          "address": {
             "type": "string"
           },
           "gender": {
-            "type": "string"
-          },
-          "state": {
             "type": "string"
           },
           "phone": {
@@ -639,6 +667,26 @@
             "type": "string"
           },
           "condition": {
+            "type": "string"
+          },
+          "specialtie": {
+            "type": "string"
+          },
+          "star": {
+            "type": "number",
+            "default": 0
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
+          },
+          "state": {
+            "type": "string"
+          },
+          "number_int_address": {
+            "type": "string"
+          },
+          "zip": {
             "type": "string"
           },
           "created_by": {

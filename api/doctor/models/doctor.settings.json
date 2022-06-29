@@ -18,16 +18,10 @@
     "last": {
       "type": "string"
     },
-    "adress": {
-      "type": "string"
-    },
-    "age": {
+    "address": {
       "type": "string"
     },
     "gender": {
-      "type": "string"
-    },
-    "state": {
       "type": "string"
     },
     "phone": {
@@ -39,6 +33,29 @@
     },
     "condition": {
       "model": "condition"
+    },
+    "specialtie": {
+      "model": "specialtie"
+    },
+    "star": {
+      "type": "decimal",
+      "default": 0,
+      "required": true,
+      "max": 5,
+      "private": false,
+      "min": 0
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "state": {
+      "type": "string"
+    },
+    "number_int_address": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
     }
   }
 }

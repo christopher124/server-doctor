@@ -576,7 +576,7 @@
           "last": {
             "type": "string"
           },
-          "addres": {
+          "address": {
             "type": "string"
           },
           "gender": {
@@ -604,7 +604,7 @@
           "last": {
             "type": "string"
           },
-          "addres": {
+          "address": {
             "type": "string"
           },
           "gender": {

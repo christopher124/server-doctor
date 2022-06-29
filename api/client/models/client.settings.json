@@ -22,7 +22,7 @@
     "last": {
       "type": "string"
     },
-    "addres": {
+    "address": {
       "type": "string"
     },
     "gender": {

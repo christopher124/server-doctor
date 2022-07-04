@@ -31,12 +31,6 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "condition": {
-      "model": "condition"
-    },
-    "specialtie": {
-      "model": "specialtie"
-    },
     "star": {
       "type": "decimal",
       "default": 0,
@@ -55,6 +49,12 @@
       "type": "string"
     },
     "zip": {
+      "type": "string"
+    },
+    "specialties": {
+      "type": "string"
+    },
+    "status": {
       "type": "string"
     }
   }

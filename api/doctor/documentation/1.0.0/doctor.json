@@ -586,44 +586,6 @@
               }
             }
           },
-          "condition": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "specialtie": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "star": {
             "type": "number",
             "default": 0
@@ -639,6 +601,12 @@
             "type": "string"
           },
           "zip": {
+            "type": "string"
+          },
+          "specialties": {
+            "type": "string"
+          },
+          "status": {
             "type": "string"
           }
         }
@@ -666,12 +634,6 @@
           "user": {
             "type": "string"
           },
-          "condition": {
-            "type": "string"
-          },
-          "specialtie": {
-            "type": "string"
-          },
           "star": {
             "type": "number",
             "default": 0
@@ -687,6 +649,12 @@
             "type": "string"
           },
           "zip": {
+            "type": "string"
+          },
+          "specialties": {
+            "type": "string"
+          },
+          "status": {
             "type": "string"
           },
           "created_by": {

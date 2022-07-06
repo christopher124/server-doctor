@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/specialties": {
+    "/customers": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the customers's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Specialtie"
+                    "$ref": "#/components/schemas/Customers"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Customers"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialtie"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Customers"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSpecialtie"
+                "$ref": "#/components/schemas/NewCustomers"
               }
             }
           }
         }
       }
     },
-    "/specialties/count": {
+    "/customers/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of customers documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Customers"
         ],
         "parameters": []
       }
     },
-    "/specialties/{id}": {
+    "/customers/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialtie"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Customers"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialtie"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Customers"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSpecialtie"
+                "$ref": "#/components/schemas/NewCustomers"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single customers record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single customers based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Customers"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Specialtie": {
+      "Customers": {
         "required": [
           "id"
         ],
@@ -524,13 +524,114 @@
           },
           "name": {
             "type": "string"
+          },
+          "last": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "number_int_address": {
+            "type": "string"
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "photo": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
           }
         }
       },
-      "NewSpecialtie": {
+      "NewCustomers": {
         "properties": {
           "name": {
             "type": "string"
+          },
+          "last": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "number_int_address": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
           },
           "created_by": {
             "type": "string"
@@ -544,7 +645,7 @@
   },
   "tags": [
     {
-      "name": "Specialtie"
+      "name": "Customers"
     }
   ]
 }

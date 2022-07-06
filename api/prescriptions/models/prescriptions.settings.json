@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prescriptions",
+  "info": {
+    "name": "prescriptions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "model": "customers"
+    },
+    "doctor": {
+      "model": "doctor"
+    },
+    "title": {
+      "type": "string"
+    },
+    "symptom": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "date"
+    },
+    "observations": {
+      "type": "richtext"
+    }
+  }
+}

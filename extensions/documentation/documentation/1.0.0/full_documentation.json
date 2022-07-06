@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/26/2022 11:26:25 PM"
+    "x-generation-date": "07/05/2022 6:47:28 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -45,19 +45,19 @@
     }
   ],
   "paths": {
-    "/clients": {
+    "/customers": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the customers's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Client"
+                    "$ref": "#/components/schemas/Customers"
                   }
                 }
               }
@@ -96,7 +96,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Customers"
         ],
         "parameters": [
           {
@@ -239,14 +239,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -284,7 +284,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Customers"
         ],
         "requestBody": {
           "description": "",
@@ -292,20 +292,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewCustomers"
               }
             }
           }
         }
       }
     },
-    "/clients/count": {
+    "/customers/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of customers documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -351,22 +351,22 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Customers"
         ],
         "parameters": []
       }
     },
-    "/clients/{id}": {
+    "/customers/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -404,7 +404,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Customers"
         ],
         "parameters": [
           {
@@ -421,14 +421,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single customers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -466,7 +466,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Customers"
         ],
         "requestBody": {
           "description": "",
@@ -474,7 +474,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewCustomers"
               }
             }
           }
@@ -494,10 +494,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single customers record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single customers based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -540,518 +540,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/conditions": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Condition"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Condition"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Condition"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Condition"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewCondition"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/conditions/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Condition"
-        ],
-        "parameters": []
-      }
-    },
-    "/conditions/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Condition"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Condition"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Condition"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Condition"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewCondition"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Condition"
+          "Customers"
         ],
         "parameters": [
           {
@@ -1578,19 +1067,19 @@
         ]
       }
     },
-    "/specialties": {
+    "/prescriptions": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the prescriptions's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Specialtie"
+                    "$ref": "#/components/schemas/Prescriptions"
                   }
                 }
               }
@@ -1629,7 +1118,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Prescriptions"
         ],
         "parameters": [
           {
@@ -1772,14 +1261,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new prescriptions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialtie"
+                  "$ref": "#/components/schemas/Prescriptions"
                 }
               }
             }
@@ -1817,7 +1306,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Prescriptions"
         ],
         "requestBody": {
           "description": "",
@@ -1825,20 +1314,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSpecialtie"
+                "$ref": "#/components/schemas/NewPrescriptions"
               }
             }
           }
         }
       }
     },
-    "/specialties/count": {
+    "/prescriptions/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of prescriptions documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -1884,22 +1373,22 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Prescriptions"
         ],
         "parameters": []
       }
     },
-    "/specialties/{id}": {
+    "/prescriptions/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one prescriptions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialtie"
+                  "$ref": "#/components/schemas/Prescriptions"
                 }
               }
             }
@@ -1937,7 +1426,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Prescriptions"
         ],
         "parameters": [
           {
@@ -1954,14 +1443,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single prescriptions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialtie"
+                  "$ref": "#/components/schemas/Prescriptions"
                 }
               }
             }
@@ -1999,7 +1488,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Prescriptions"
         ],
         "requestBody": {
           "description": "",
@@ -2007,7 +1496,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSpecialtie"
+                "$ref": "#/components/schemas/NewPrescriptions"
               }
             }
           }
@@ -2027,10 +1516,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single prescriptions record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single prescriptions based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -2073,7 +1562,7 @@
         },
         "summary": "",
         "tags": [
-          "Specialtie"
+          "Prescriptions"
         ],
         "parameters": [
           {
@@ -4318,12 +3807,36 @@
   },
   "components": {
     "schemas": {
-      "Client": {
+      "Customers": {
         "required": [
           "id"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "last": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "number_int_address": {
             "type": "string"
           },
           "user": {
@@ -4374,6 +3887,14 @@
               }
             }
           },
+          "birthday": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "NewCustomers": {
+        "properties": {
           "name": {
             "type": "string"
           },
@@ -4386,68 +3907,24 @@
           "gender": {
             "type": "string"
           },
-          "age": {
-            "type": "string"
-          },
           "phone": {
             "type": "string"
           },
           "state": {
             "type": "string"
-          }
-        }
-      },
-      "NewClient": {
-        "properties": {
+          },
+          "zip": {
+            "type": "string"
+          },
+          "number_int_address": {
+            "type": "string"
+          },
           "user": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "last": {
-            "type": "string"
-          },
-          "address": {
-            "type": "string"
-          },
-          "gender": {
-            "type": "string"
-          },
-          "age": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "state": {
-            "type": "string"
-          },
-          "created_by": {
-            "type": "string"
-          },
-          "updated_by": {
-            "type": "string"
-          }
-        }
-      },
-      "Condition": {
-        "required": [
-          "id"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          }
-        }
-      },
-      "NewCondition": {
-        "properties": {
-          "name": {
-            "type": "string"
+          "birthday": {
+            "type": "string",
+            "format": "date"
           },
           "created_by": {
             "type": "string"
@@ -4529,44 +4006,6 @@
               }
             }
           },
-          "condition": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "specialtie": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "star": {
             "type": "number",
             "default": 0
@@ -4582,6 +4021,12 @@
             "type": "string"
           },
           "zip": {
+            "type": "string"
+          },
+          "specialties": {
+            "type": "string"
+          },
+          "status": {
             "type": "string"
           }
         }
@@ -4609,12 +4054,6 @@
           "user": {
             "type": "string"
           },
-          "condition": {
-            "type": "string"
-          },
-          "specialtie": {
-            "type": "string"
-          },
           "star": {
             "type": "number",
             "default": 0
@@ -4632,6 +4071,12 @@
           "zip": {
             "type": "string"
           },
+          "specialties": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
           "created_by": {
             "type": "string"
           },
@@ -4640,7 +4085,7 @@
           }
         }
       },
-      "Specialtie": {
+      "Prescriptions": {
         "required": [
           "id"
         ],
@@ -4648,14 +4093,142 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "customer": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "last": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "gender": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "zip": {
+                "type": "string"
+              },
+              "number_int_address": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "birthday": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "doctor": {
+            "required": [
+              "id",
+              "star"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "last": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "gender": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "star": {
+                "type": "number"
+              },
+              "birthday": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "number_int_address": {
+                "type": "string"
+              },
+              "zip": {
+                "type": "string"
+              },
+              "specialties": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "symptom": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "observations": {
             "type": "string"
           }
         }
       },
-      "NewSpecialtie": {
+      "NewPrescriptions": {
         "properties": {
-          "name": {
+          "customer": {
+            "type": "string"
+          },
+          "doctor": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "symptom": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "observations": {
             "type": "string"
           },
           "created_by": {
@@ -5023,16 +4596,13 @@
   },
   "tags": [
     {
-      "name": "Client"
-    },
-    {
-      "name": "Condition"
+      "name": "Customers"
     },
     {
       "name": "Doctor"
     },
     {
-      "name": "Specialtie"
+      "name": "Prescriptions"
     },
     {
       "name": "Email - Email"

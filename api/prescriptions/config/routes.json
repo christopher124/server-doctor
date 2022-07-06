@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/conditions",
-      "handler": "condition.find",
+      "path": "/prescriptions",
+      "handler": "prescriptions.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/conditions/count",
-      "handler": "condition.count",
+      "path": "/prescriptions/count",
+      "handler": "prescriptions.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/conditions/:id",
-      "handler": "condition.findOne",
+      "path": "/prescriptions/:id",
+      "handler": "prescriptions.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/conditions",
-      "handler": "condition.create",
+      "path": "/prescriptions",
+      "handler": "prescriptions.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/conditions/:id",
-      "handler": "condition.update",
+      "path": "/prescriptions/:id",
+      "handler": "prescriptions.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/conditions/:id",
-      "handler": "condition.delete",
+      "path": "/prescriptions/:id",
+      "handler": "prescriptions.delete",
       "config": {
         "policies": []
       }

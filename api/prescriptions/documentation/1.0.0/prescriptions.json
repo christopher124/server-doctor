@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/conditions": {
+    "/prescriptions": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the prescriptions's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Condition"
+                    "$ref": "#/components/schemas/Prescriptions"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Condition"
+          "Prescriptions"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new prescriptions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Condition"
+                  "$ref": "#/components/schemas/Prescriptions"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Condition"
+          "Prescriptions"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCondition"
+                "$ref": "#/components/schemas/NewPrescriptions"
               }
             }
           }
         }
       }
     },
-    "/conditions/count": {
+    "/prescriptions/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of prescriptions documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Condition"
+          "Prescriptions"
         ],
         "parameters": []
       }
     },
-    "/conditions/{id}": {
+    "/prescriptions/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one prescriptions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Condition"
+                  "$ref": "#/components/schemas/Prescriptions"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Condition"
+          "Prescriptions"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single prescriptions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve prescriptions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Condition"
+                  "$ref": "#/components/schemas/Prescriptions"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Condition"
+          "Prescriptions"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCondition"
+                "$ref": "#/components/schemas/NewPrescriptions"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single prescriptions record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single prescriptions based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Condition"
+          "Prescriptions"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Condition": {
+      "Prescriptions": {
         "required": [
           "id"
         ],
@@ -522,14 +522,142 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "customer": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "last": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "gender": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "zip": {
+                "type": "string"
+              },
+              "number_int_address": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "birthday": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "doctor": {
+            "required": [
+              "id",
+              "star"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "last": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "gender": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "star": {
+                "type": "number"
+              },
+              "birthday": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "number_int_address": {
+                "type": "string"
+              },
+              "zip": {
+                "type": "string"
+              },
+              "specialties": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "symptom": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "observations": {
             "type": "string"
           }
         }
       },
-      "NewCondition": {
+      "NewPrescriptions": {
         "properties": {
-          "name": {
+          "customer": {
+            "type": "string"
+          },
+          "doctor": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "symptom": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "observations": {
             "type": "string"
           },
           "created_by": {
@@ -544,7 +672,7 @@
   },
   "tags": [
     {
-      "name": "Condition"
+      "name": "Prescriptions"
     }
   ]
 }

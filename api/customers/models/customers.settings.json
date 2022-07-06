@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "clients",
+  "collectionName": "customers",
   "info": {
-    "name": "client",
+    "name": "customers",
     "description": ""
   },
   "options": {
@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "name": {
       "type": "string"
     },
@@ -28,14 +24,24 @@
     "gender": {
       "type": "string"
     },
-    "age": {
-      "type": "string"
-    },
     "phone": {
       "type": "string"
     },
     "state": {
       "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "number_int_address": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "birthday": {
+      "type": "date"
     }
   }
 }

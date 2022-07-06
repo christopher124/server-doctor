@@ -593,6 +593,10 @@
                 "type": "string"
               }
             }
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
           }
         }
       },
@@ -624,6 +628,10 @@
           },
           "user": {
             "type": "string"
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
           },
           "created_by": {
             "type": "string"

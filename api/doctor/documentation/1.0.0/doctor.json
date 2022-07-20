@@ -538,6 +538,63 @@
           "phone": {
             "type": "string"
           },
+          "star": {
+            "type": "number",
+            "default": 0
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date"
+          },
+          "state": {
+            "type": "string"
+          },
+          "number_int_address": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "specialties": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "suburb": {
+            "type": "string"
+          },
+          "town": {
+            "type": "string"
+          },
+          "quotes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "customer": {
+                  "type": "string"
+                },
+                "doctor": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "user": {
             "required": [
               "id",
@@ -575,9 +632,6 @@
               "role": {
                 "type": "string"
               },
-              "photo": {
-                "type": "string"
-              },
               "created_by": {
                 "type": "string"
               },
@@ -585,29 +639,6 @@
                 "type": "string"
               }
             }
-          },
-          "star": {
-            "type": "number",
-            "default": 0
-          },
-          "birthday": {
-            "type": "string",
-            "format": "date"
-          },
-          "state": {
-            "type": "string"
-          },
-          "number_int_address": {
-            "type": "string"
-          },
-          "zip": {
-            "type": "string"
-          },
-          "specialties": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
           }
         }
       },
@@ -631,9 +662,6 @@
           "phone": {
             "type": "string"
           },
-          "user": {
-            "type": "string"
-          },
           "star": {
             "type": "number",
             "default": 0
@@ -655,6 +683,21 @@
             "type": "string"
           },
           "status": {
+            "type": "string"
+          },
+          "suburb": {
+            "type": "string"
+          },
+          "town": {
+            "type": "string"
+          },
+          "quotes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "user": {
             "type": "string"
           },
           "created_by": {

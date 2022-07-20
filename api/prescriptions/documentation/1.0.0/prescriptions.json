@@ -560,6 +560,24 @@
               "birthday": {
                 "type": "string"
               },
+              "status": {
+                "type": "boolean"
+              },
+              "suburb": {
+                "type": "string"
+              },
+              "town": {
+                "type": "string"
+              },
+              "quotes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "password": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -592,9 +610,6 @@
               "phone": {
                 "type": "string"
               },
-              "user": {
-                "type": "string"
-              },
               "star": {
                 "type": "number"
               },
@@ -614,6 +629,21 @@
                 "type": "string"
               },
               "status": {
+                "type": "string"
+              },
+              "suburb": {
+                "type": "string"
+              },
+              "town": {
+                "type": "string"
+              },
+              "quotes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user": {
                 "type": "string"
               },
               "created_by": {

@@ -27,10 +27,6 @@
     "phone": {
       "type": "string"
     },
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "star": {
       "type": "decimal",
       "default": 0,
@@ -56,6 +52,20 @@
     },
     "status": {
       "type": "string"
+    },
+    "suburb": {
+      "type": "string"
+    },
+    "town": {
+      "type": "string"
+    },
+    "quotes": {
+      "via": "doctor",
+      "collection": "quotes"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

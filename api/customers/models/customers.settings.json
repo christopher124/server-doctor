@@ -42,6 +42,22 @@
     },
     "birthday": {
       "type": "date"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "suburb": {
+      "type": "string"
+    },
+    "town": {
+      "type": "string"
+    },
+    "quotes": {
+      "via": "customer",
+      "collection": "quotes"
+    },
+    "password": {
+      "type": "string"
     }
   }
 }

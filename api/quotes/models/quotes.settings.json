@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotes",
+  "info": {
+    "name": "quotes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "via": "quotes",
+      "model": "customers"
+    },
+    "doctor": {
+      "via": "quotes",
+      "model": "doctor"
+    },
+    "date": {
+      "type": "datetime"
+    }
+  }
+}

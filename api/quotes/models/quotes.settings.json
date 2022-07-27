@@ -22,6 +22,15 @@
     },
     "date": {
       "type": "datetime"
+    },
+    "room": {
+      "type": "string"
+    },
+    "service": {
+      "type": "richtext"
+    },
+    "especialites": {
+      "type": "string"
     }
   }
 }

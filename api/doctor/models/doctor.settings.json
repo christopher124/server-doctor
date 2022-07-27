@@ -27,14 +27,6 @@
     "phone": {
       "type": "string"
     },
-    "star": {
-      "type": "decimal",
-      "default": 0,
-      "required": true,
-      "max": 5,
-      "private": false,
-      "min": 0
-    },
     "birthday": {
       "type": "date"
     },
@@ -66,6 +58,10 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "prescriptions": {
+      "via": "doctor",
+      "collection": "prescriptions"
     }
   }
 }

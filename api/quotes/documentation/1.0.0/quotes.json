@@ -575,8 +575,11 @@
                   "type": "string"
                 }
               },
-              "password": {
-                "type": "string"
+              "prescriptions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -588,8 +591,7 @@
           },
           "doctor": {
             "required": [
-              "id",
-              "star"
+              "id"
             ],
             "properties": {
               "id": {
@@ -609,9 +611,6 @@
               },
               "phone": {
                 "type": "string"
-              },
-              "star": {
-                "type": "number"
               },
               "birthday": {
                 "type": "string"
@@ -646,6 +645,12 @@
               "user": {
                 "type": "string"
               },
+              "prescriptions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -657,6 +662,15 @@
           "date": {
             "type": "string",
             "format": "date-time"
+          },
+          "room": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "especialites": {
+            "type": "string"
           }
         }
       },
@@ -671,6 +685,15 @@
           "date": {
             "type": "string",
             "format": "date-time"
+          },
+          "room": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "especialites": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

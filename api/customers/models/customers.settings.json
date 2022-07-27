@@ -56,8 +56,9 @@
       "via": "customer",
       "collection": "quotes"
     },
-    "password": {
-      "type": "string"
+    "prescriptions": {
+      "via": "customer",
+      "collection": "prescriptions"
     }
   }
 }

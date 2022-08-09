@@ -587,7 +587,7 @@
                 "service": {
                   "type": "string"
                 },
-                "especialites": {
+                "status": {
                   "type": "string"
                 },
                 "created_by": {
@@ -686,6 +686,12 @@
                 }
               }
             }
+          },
+          "cellule": {
+            "type": "string"
+          },
+          "workdates": {
+            "type": "object"
           }
         }
       },
@@ -745,6 +751,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "cellule": {
+            "type": "string"
+          },
+          "workdates": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"

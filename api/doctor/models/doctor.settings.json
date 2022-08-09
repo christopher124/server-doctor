@@ -62,6 +62,12 @@
     "prescriptions": {
       "via": "doctor",
       "collection": "prescriptions"
+    },
+    "cellule": {
+      "type": "string"
+    },
+    "workdates": {
+      "type": "json"
     }
   }
 }

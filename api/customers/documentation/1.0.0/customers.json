@@ -629,7 +629,7 @@
                 "service": {
                   "type": "string"
                 },
-                "especialites": {
+                "status": {
                   "type": "string"
                 },
                 "created_by": {

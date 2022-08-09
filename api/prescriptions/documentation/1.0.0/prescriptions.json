@@ -651,6 +651,12 @@
                   "type": "string"
                 }
               },
+              "cellule": {
+                "type": "string"
+              },
+              "workdates": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },

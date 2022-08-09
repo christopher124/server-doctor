@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "07/26/2022 7:56:30 PM"
+    "x-generation-date": "08/03/2022 8:12:54 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4433,7 +4433,7 @@
                 "service": {
                   "type": "string"
                 },
-                "especialites": {
+                "status": {
                   "type": "string"
                 },
                 "created_by": {
@@ -4625,7 +4625,7 @@
                 "service": {
                   "type": "string"
                 },
-                "especialites": {
+                "status": {
                   "type": "string"
                 },
                 "created_by": {
@@ -4724,6 +4724,12 @@
                 }
               }
             }
+          },
+          "cellule": {
+            "type": "string"
+          },
+          "workdates": {
+            "type": "object"
           }
         }
       },
@@ -4783,6 +4789,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "cellule": {
+            "type": "string"
+          },
+          "workdates": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"
@@ -4928,6 +4940,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "cellule": {
+                "type": "string"
+              },
+              "workdates": {
+                "type": "object"
               },
               "created_by": {
                 "type": "string"
@@ -5128,6 +5146,12 @@
                   "type": "string"
                 }
               },
+              "cellule": {
+                "type": "string"
+              },
+              "workdates": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -5146,7 +5170,7 @@
           "service": {
             "type": "string"
           },
-          "especialites": {
+          "status": {
             "type": "string"
           }
         }
@@ -5169,7 +5193,7 @@
           "service": {
             "type": "string"
           },
-          "especialites": {
+          "status": {
             "type": "string"
           },
           "created_by": {

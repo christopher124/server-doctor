@@ -17,8 +17,8 @@
       "via": "prescriptions"
     },
     "doctor": {
-      "model": "doctor",
-      "via": "prescriptions"
+      "via": "prescriptions",
+      "model": "doctor"
     },
     "weight": {
       "type": "string"

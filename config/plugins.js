@@ -1,14 +1,19 @@
 module.exports = ({ env }) => ({
   // ...
   email: {
-    provider: "sendgrid",
-    providerOptions: {
-      apiKey: env("SENDGRID_API_KEY"),
+    config: {
+      provider: "strapi-provider-email-mailjet",
+      providerOptions: {
+        publicApiKey: env("MAILJET_PUBLIC_KEY"),
+        secretApiKey: env("MAILJET_SECRET_KEY"),
+      },
+      settings: {
+        defaultFrom: "urri740@gmail.com",
+        defaultFromName: "christopher",
+        defaultTo: "urri_@hotmail.com",
+        defaultToName: "sosa",
+      },
     },
-    settings: {
-      defaultFrom: "urri_@hotmail.com",
-      defaultReplyTo: "urri_@hotmail.com",
-    },
+    // ...
   },
-  // ...
 });

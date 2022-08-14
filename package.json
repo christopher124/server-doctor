@@ -23,6 +23,7 @@
     "strapi-plugin-i18n": "3.6.10",
     "strapi-plugin-upload": "3.6.10",
     "strapi-plugin-users-permissions": "3.6.10",
+    "strapi-provider-email-mailjet": "^4.0.0",
     "strapi-provider-email-sendgrid": "^3.6.10",
     "strapi-utils": "3.6.10",
     "twilio": "^3.80.0"
